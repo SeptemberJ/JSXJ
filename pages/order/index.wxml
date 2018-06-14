@@ -1,0 +1,52 @@
+<!--<view class="tab_block">
+  <text wx:for="{{states}}" wx:key="" class="{{cur==index?'active':''}}" bindtap="changeTab" data-index="{{index}}">{{item}}</text>
+</view>-->
+
+<view class="orderList">
+  <scroll-view scroll-y="true">
+        <view wx:if="{{orderList.length>0}}" class="order_block">
+          <block wx:for="{{orderList}}" wx:key="">
+            <view class="order_item">
+              <view class="itemf">
+                <text class="">订单号：{{item.orderNo}}</text>
+              </view>
+
+              <block wx:for="{{item.goodsList}}" wx:key="">
+              <view class="item hasTopLine">
+                <text>货号：{{item.goodNo}}</text>
+                <text>品名：{{item.goodName}}</text>
+              </view>
+              <view class="item">
+                <text>需求数量：{{item.amount}}</text>
+                <text>总价：{{item.salePrice}}</text>
+                <!--<text>货期：{{item.futures}}</text>-->
+              </view>
+              <!--<view class="item">
+                <text>市场价格：¥{{item.marketPrice}}</text>
+                <text wx:if="{{cur==1}}" class="salePrice">优惠价格：¥{{item.salePrice}}</text>
+              </view>-->
+
+              
+              </block>
+<view class="item  cancelEnquiry" wx:if="{{cur==0}}">
+                <image src="../../image/icon_delete.png" bindtap="cancelEnquiry" data-index="{{index}}"></image>
+              </view>
+              <view class="item totalPrice" wx:else>
+                <!--<image src="../../image/preferential.png" class="preferential"></image>-->
+                <text class="whiteColor">合计</text>
+                <text class="whiteColor">¥{{item.total}}</text>
+              </view>
+            </view>
+          </block>
+        </view>
+
+        <view class="InfoNull" wx:else>
+          <image src="../../image/orderNull.png"></image>
+          <text>暂无相关询价单！</text>
+        </view>
+  </scroll-view>
+</view>
+
+<loading hidden="{{loadingHidden}}">
+  加载中...
+</loading>

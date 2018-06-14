@@ -1,0 +1,80 @@
+.nameBlock,.introCont{
+  width: 710rpx;
+  padding: 10rpx 20rpx;
+  display: flex;
+}
+.introCont{
+  flex-direction: column;
+}
+.introCont text{
+  font-size: 30rpx;
+  margin: 10rpx 0;
+}
+.summarizeTit{
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  font-size: 32rpx;
+  color: #7F0019;
+  margin-bottom: 20rpx;
+}
+.left{
+  width: 150rpx;
+}
+.left image{
+  width: 150rpx;
+  height: 150rpx;
+}
+.right{
+  width: 560rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.noraml{
+  font-size: 30rpx;
+}
+.special{
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+.introCont{
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.item{
+  width:710rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.columnTit{
+  height: 50rpx;
+  line-height: 50rpx;
+  border-left: 6px solid #7F0019;
+  padding-left: 10rpx;
+  font-weight: bold;
+}
+.imgBlock{
+  width:710rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.imgBlock image{
+  width:142rpx;
+  height: 48rpx;
+   margin: 20rpx 0;
+}
+.addr{
+  width: 710rpx;
+  height: auto;
+  
+}
+.addr image{
+  width: 710rpx;
+}

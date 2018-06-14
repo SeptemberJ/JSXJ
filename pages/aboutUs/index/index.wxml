@@ -1,0 +1,15 @@
+<view bindtap="navigateToIntroduction" class="tableviewcell">
+	<image src="../../../image/introduction.png" />
+	<text>公司介绍</text>
+	<view class="right">
+    <image  data-index="{{index}}" src="../../../image/icon-arrowdown2.png" />
+	</view>
+</view>
+
+<view bindtap="navigateToHandleList" class="tableviewcell">
+	<image src="../../../image/handle.png" />
+	<text>空压机常见的故障及处理</text>
+	<view class="right">
+		<image  data-index="{{index}}" src="../../../image/icon-arrowdown2.png" />
+	</view>
+</view>

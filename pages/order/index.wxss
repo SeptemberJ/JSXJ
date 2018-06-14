@@ -1,0 +1,216 @@
+page{
+  background: #f1f1f1;
+}
+.tab_block{
+    width: 400rpx;
+    height: 60rpx;
+    margin: 20rpx auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid #d81e06;
+    border-radius: 10rpx;
+}
+.tab_block text{
+    width: 50%;
+    height: 60rpx;
+    font-size: 33rpx;
+    line-height: 60rpx;
+    text-align: center;
+}
+.active{
+    background: #d81e06;
+    color: #fff;
+}
+.orderList{
+  width: 710rpx;
+  padding: 40rpx 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.order_item{
+   width: 710rpx;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: auto;
+   background: #fff;
+   border-radius:10rpx;
+   overflow:hidden;
+
+}
+.order_item:not(:first-of-type){
+  margin: 40rpx auto;
+}
+.itemf {
+  width:100%;
+  height:100rpx;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  border-bottom:1rpx solid #eee;
+}
+.itemf text{
+    width: calc(100% - 20rpx);
+    display: flex;
+    font-size: 32rpx;
+    line-height: 100rpx;
+    padding: 0 10rpx;
+}
+
+.item {
+  width:710rpx;
+  height:70rpx;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+}
+.item text {
+  width:calc(710rpx - 20rpx);
+  display:flex;
+  font-size:32rpx;
+  line-height:70rpx;
+  padding:0 10rpx;
+}
+.hasTopLine:not(:first-of-type) {
+  border-top:1rpx solid #eee;
+}
+.redColor {
+  color:#d81e06;
+  font-weight:bold;
+}
+.whiteColor {
+  color: #fff;
+  font-weight: bold;
+}
+image{
+    width: 90rpx;
+    height: 90rpx;
+    display: block;
+    margin: 5rpx auto;
+}
+.totalPrice{
+    background: #d81e06;
+}
+
+
+
+/*page{
+    background: #f1f1f1;
+}
+.tab_block{
+    width: 400rpx;
+    height: 60rpx;
+    margin: 20rpx auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid #d81e06;
+    border-radius: 10rpx;
+}
+.tab_block text{
+    width: 50%;
+    height: 60rpx;
+    font-size: 33rpx;
+    line-height: 60rpx;
+    text-align: center;
+}
+.active{
+    background: #d81e06;
+    color: #fff;
+}
+
+
+.orderList{
+    width: 95%;
+    margin: 20rpx auto;
+    
+}
+.order_block{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.order_item{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    margin: 20rpx auto;
+}
+.itemf{
+    width: 100%;
+    height: 100rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1rpx solid #eee;
+}
+.itemf text{
+    width: 100%;
+    display: flex;
+    font-size: 32rpx;
+    line-height: 100rpx;
+    padding: 0 10rpx;
+}
+.item{
+    width: 95%;
+    height: 70rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+}
+.hasTopLine:not(:first-of-type){
+    border-top: 1rpx solid #eee;
+}
+.item:last-of-type{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.item text{
+    width: 100%;
+    display: flex;
+    font-size: 32rpx;
+    line-height: 70rpx;
+    padding: 0 10rpx;
+}
+.totalPrice{
+    background: #FFF8DC;
+}
+
+.totalPrice text{
+    width: 48%;
+    color: #d81e06;
+    font-weight: bold;
+}
+
+image{
+    width: 90rpx;
+    height: 90rpx;
+    display: block;
+    margin: 5rpx auto;
+}
+.preferential{
+    width: 80rpx;
+    height: 80rpx;
+    display: block;
+    margin: 10rpx auto 10rpx 0;
+}
+.salePrice{
+    color: #d81e06;
+    font-weight: bold;
+}
+.cancelEnquiry{
+    background: #FFF8DC;
+
+}
+*/

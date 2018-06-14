@@ -1,0 +1,33 @@
+.titBlock{
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+.titItem{
+  width: calc(100% - 20rpx);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 10rpx;
+  border-bottom: 1px solid #ddd;
+  padding: 10rpx;
+}
+.titItem image{
+  width: 120rpx;
+  height: 120rpx;
+  /* border-radius: 50%; */
+  overflow: hidden;
+  /* border: 1rpx solid #eee; */
+  margin-right: 15rpx;
+}
+.titItem text{
+  width: calc(100% - 120rpx);
+  
+}
+.hasBlank{
+  margin: 0 10rpx;
+}

@@ -1,0 +1,37 @@
+<view class="logoWrap">
+  <image src="../../image/logo.png"></image>
+</view>
+
+<view class="loginWrap">
+  <view class="login_item">
+    <view class="login_icon">
+      <image src="../../image/my.png"></image>
+    </view>
+    <input placeholder="请输入用户名" bindinput="userName"/>
+  </view>
+  <view class="login_item">
+    <view class="login_icon">
+      <image src="../../image/password.png"></image>
+    </view>
+    <input placeholder="请输入密码" type="password" bindinput="psd"/>
+  </view>
+  <view class="addBlock">
+    <text bindtap="toSign">去注册</text>
+    <text bindtap="forgetPsd">忘记密码</text>
+  </view>
+  <button class="submitBt btBackground" type="" disabled="{{canDo}}" bindtap="submitLogin">登录</button>
+  <!-- <button class="submitBt" type="warn" disabled="{{canDo}}" bindtap="goIntroduction">关于我们</button> -->
+</view>
+
+<!-- <view class="footer">
+  <text>柏田科技提供技术开发</text>
+</view> -->
+ <view class='tabBar'>
+  <text bindtap='navigateToIntroduction'>关于我们</text>
+  <text bindtap='navigateToHandleList'>常见故障及处理</text>
+  <text bindtap='navigateToChoose'>如何选购零件</text>
+</view> 
+
+<loading hidden="{{loadingHidden}}">
+  加载中...
+</loading>

@@ -1,0 +1,139 @@
+/*.topTitle{
+    background: pink;
+}
+
+.topTitle view{
+    width: 200rpx;
+    height: 80rpx;
+    float: left;
+    line-height: 80rpx;
+    text-align: center;
+}*/
+.wrap{
+     white-space: nowrap; 
+     display: flex;
+     padding-top:20rpx;
+     margin-bottom:calc(51px + 80rpx);
+}
+.tit{
+     width: 200rpx; 
+     height: 100rpx; 
+     display: inline-block;
+     font-weight: bold;
+     line-height: 100rpx;
+     text-align:center;
+     border-bottom:2rpx solid #eee; 
+}
+.inforBox{
+    width: 2000rpx;
+    height: 110rpx;
+    /*display: block;*/
+    border-bottom:2rpx solid #eee; 
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+}
+.delete image{
+  width: 50rpx;
+  height: 50rpx;
+  margin: 25rpx;
+}
+.item{
+     width: 200rpx;
+     height: 100rpx;
+     display: inline-block;
+     text-align:center;
+     /*background: #ccc;*/
+}
+.item input{
+     width: 100%;
+     height: 100%;
+}
+.item text{
+     width: 100%;
+     height: 100%;
+     line-height: 100rpx;
+}
+/*.spe{
+     width: 200rpx;
+     height: 100rpx;
+     margin-top: -50rpx;
+}*/
+/*.showImg{
+    width: 500rpx;
+    height: 500rpx;
+    display: block;
+    position: absolute;
+    left: calc(50% - 250rpx);
+    top: calc(50% - 250rpx);
+}
+.showImg image{
+    width: 500rpx;
+    height: 500rpx;
+    display: block;
+    z-index: 999;
+}*/
+.showImg{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #000;
+    z-index: 99;
+    opacity: 0.9;
+}
+.showImg image{
+    width: 500rpx;
+    height: 500rpx;
+    display: block;
+    position: absolute;
+    left: calc(50% - 250rpx);
+    top: calc(50% - 250rpx);
+    z-index: 999;
+}
+.cancelBlock{
+    width: 80rpx;
+    height: 80rpx;
+    display: block;
+    position: relative;
+    left: calc((100% - 500rpx)/2 + 500rpx - 20rpx);
+    top:calc(50% - 250rpx - 60rpx);
+    z-index: 9999;
+}
+.cancelBlock image{
+    width: 80rpx;
+    height: 80rpx;
+    display: block;
+    position:absolute;
+    left: 0rpx;
+    top:0rpx;
+}
+
+.addOne_block{
+    width:180rpx;
+    height: 80rpx;
+    display: flex;
+    position: fixed;
+    left: 50%;
+    bottom: 55px;
+    transform: translate(-50%);
+    z-index: 99999;
+    flex-direction: row;
+    align-items: center;
+    margin:20rpx auto auto 20rpx;
+    font-weight: bold;
+    color: #1aad16;
+    /*background: #1aad16;*/
+    
+}
+.addOne_block button{
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    background: #7F0019;
+    font-size: 32rpx;
+    color: #fff;
+    padding: 0;
+}

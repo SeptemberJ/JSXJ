@@ -1,0 +1,39 @@
+page {
+	background: #eee;
+}
+
+/*menu list*/
+.tableviewcell {
+	padding: 20rpx 10rpx;
+	border-bottom: 1rpx solid #ddd;
+	color: #666;
+	background: white;
+	display: flex;
+	align-items: center;
+}
+.tableviewcell .right{
+	display: flex;
+  flex-direction: column;
+  align-items: center;
+	padding-top: 15rpx;
+}
+.tableviewcell .right image{
+	display: block;
+	float: right;
+	width:50rpx;
+	height: 50rpx;
+}
+
+/*left icon*/
+.tableviewcell image {
+	width: 60rpx;
+	height: 60rpx;
+}
+
+/*text*/
+.tableviewcell text {
+	flex-grow:10;
+	padding-left: 10rpx;
+}
+
+

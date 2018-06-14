@@ -1,0 +1,63 @@
+.logoWrap{
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+image{
+  width: 150rpx;
+  height: 150rpx;
+}
+.signWrap{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.sign_item{
+  width: 90%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.lable{
+  width: 200rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-right: 20rpx;
+  text-align: right;
+  font-size: 30rpx;
+}
+.code{
+  width: 100rpx;
+  height: 100rpx;
+  font-size: 28rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10rpx;
+  padding: 0rpx;
+  line-height: 50rpx;
+  /*display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;*/
+  /*line-height: 0rpx;*/
+  background: #7F0019;
+  color: #fff;
+  
+}
+input{
+  width: 375rpx;
+  height: 100%;
+  font-size: 30rpx;
+  border-bottom: 1px solid #eee;
+}
+.submitBt{
+  width: 50%;
+  margin-top: 40px;
+}

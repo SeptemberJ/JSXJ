@@ -1,0 +1,32 @@
+<view class="logoWrap">
+  <image src="../../image/logo.png"></image>
+</view>
+
+<view class="signWrap">
+  <view class="sign_item">
+    <text class="lable">手机号码：</text>
+    <input type="number" placeholder="请输入手机号码" bindinput="enterprisePhone"/>
+  </view>
+
+  <view class="sign_item">
+    <text class="lable">验证码：</text>
+    <input placeholder="请输入验证码" bindinput="code"/>
+    <button class="code" bindtap="toGetCode" disabled="{{canGetCode}}">{{timerCount}}</button> 
+  </view>
+  
+  <view class="sign_item">
+    <text class="lable">密码：</text>
+    <input placeholder="请输入密码" type="password" bindinput="psd"/>
+  </view>
+  <view class="sign_item">
+    <text class="lable">确认密码：</text>
+    <input placeholder="请再次输入密码" type="password" bindinput="psdAgain"/>
+  </view>
+
+  <button class="submitBt btBackground" type="" disabled="{{canDo}}" bindtap="submitSign">提交</button>
+</view>
+
+
+<loading hidden="{{loadingHidden}}">
+  加载中...
+</loading>

@@ -1,0 +1,48 @@
+ <view class="nameBlock">
+  <view class="left">
+    <image src="../../../image/logo.png"></image>
+  </view>
+  <view class="right">
+    <text class="special">上海精善压缩机股份有限公司</text>
+    <text class="noraml">Shanghai Jingsair Compressor Co.,Ltd.</text>
+  </view>
+</view> 
+<!--文字资料-->
+<view class="introCont">
+  <view class='summarizeTit'>精善股份-----为您创造价值的空气压缩机服务商</view>
+  <!--我们的使命-->
+  <view class="item">
+    <text class='columnTit'>我们的使命：</text>
+    <text>致力于空气压缩机原厂配件的性能研究，以保证机器设备运行的稳定可靠</text>
+      <text>致力于空气压缩机原厂配件的渠道开发，以降低机器设备维护保养的成本</text>
+      <text>致力于空气压缩机原厂配件的及时送达，以缩短机器设备故障的停机时间</text>
+  </view>
+  <!--我们的经营范围-->
+  <view class="item">
+        <text class='columnTit'>我们的经营范围：</text>
+        <text>空气压缩机整机及配件的销售，空气压缩机整机的保养维修，空气压缩机整机租赁，干燥机，储气罐，精过滤器等空气压缩机后处理设备</text>
+  </view>
+  <!--我们服务的品牌-->
+  <view class="item">
+        <text class='columnTit'>我们服务的品牌：</text>
+        <text>英格索兰，阿特拉斯.柯普科,寿力，复盛等空气压缩机</text>
+  </view>
+  <view class="imgBlock">
+    <image src="../../../image/brand-1.png"></image>
+    <image src="../../../image/brand-2.png"></image>
+    <image src="../../../image/brand-3.png"></image>
+    <image src="../../../image/brand-4.png"></image>
+    <image src="../../../image/brand-5.png"></image>
+  </view>
+  <!--我们的地址-->
+  <view class="item">
+        <text class='columnTit'>我们的地址：</text>
+        <text>上海市闵行区漕河泾开发区浦江高科技园新骏环路188号9幢1楼</text>
+  </view>
+
+  <view class="addr">
+    <image src="../../../image/js.png" mode="aspectFit"></image>
+  </view>
+  
+
+</view>

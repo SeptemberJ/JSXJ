@@ -1,0 +1,15 @@
+<view class="titBlock" wx:if="{{titList.length>0}}">
+  <view class="titItem" wx:for="{{titList}}" data-id="{{item.id}}" bindtap="goDetail" >
+    <image src="{{item.fimage}}"></image>
+    <text>{{item.title}}</text>
+  </view>
+</view>
+
+  <view wx:else class="noData">
+    <image src="../../../../image/error.png"></image>
+    <text>暂无相关信息!</text>
+  </view>
+
+<loading hidden="{{loadingHidden}}">
+  加载中...
+</loading>

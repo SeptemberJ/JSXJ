@@ -1,0 +1,12 @@
+<import src="../../../wxParse/wxParse.wxml"/>
+<view class="title">
+  <text>{{title}}</text>
+</view>
+
+<view class="introduction">
+  <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>
+
+<loading hidden="{{loadingHidden}}">
+  加载中...
+</loading>

@@ -1,0 +1,26 @@
+{
+  "pages": [
+    "pages/login/index",
+    "pages/aboutUs/index/index",
+    "pages/aboutUs/introduction/index",
+    "pages/aboutUs/handle/list/index",
+    "pages/aboutUs/handle/detail/index",
+    "pages/aboutUs/choose/list/index",
+    "pages/aboutUs/choose/detail/index",
+    "pages/index/index",
+    "pages/order/index",
+    "pages/sign/index",
+    "pages/modify/index",
+    "dist/tabbar"
+  ],
+  "window": {
+    "backgroundTextStyle": "white",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "精善股份",
+    "navigationBarBackgroundColor": "#7F0019",
+    "backgroundColor": "#fff",
+    "enablePullDownRefresh": true
+  },
+  
+  "debug": true
+}

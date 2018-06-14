@@ -1,0 +1,44 @@
+.logoWrap{
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+image{
+  width: 150rpx;
+  height: 150rpx;
+}
+.signWrap{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.sign_item{
+  width: 90%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.sign_item text{
+  width: 200rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-right: 20rpx;
+  text-align: right;
+  font-size: 30rpx;
+}
+input{
+  width: 475rpx;
+  height: 100%;
+  border-bottom: 1px solid #eee;
+  font-size: 30rpx;
+  line-height: 100%;
+  padding: 0 20rpx;
+}
+.submitBt{
+  width: 50%;
+  margin-top: 40px;
+}

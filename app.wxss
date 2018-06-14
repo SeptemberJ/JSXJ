@@ -1,0 +1,65 @@
+/**app.wxss**/
+/*.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+.bt{
+    font-size: 37rpx;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 25rpx;
+    background-color: #5cb85c;
+}
+.bthover{
+    background-color: #449d44;
+}*/
+
+page{font-family:"Microsoft Yahei",Heiti,arial,helvetica,Helvetica,Verdana,sans-serif!important;}
+
+.noData{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20rpx auto;
+    text-align: center;
+}
+.noData image{
+    width: 200rpx;
+    height: 200rpx;
+    margin: 20rpx auto;
+    
+}
+.noData text{
+    font-size: 30rpx;
+    color: #515151;
+}
+.btBackground{
+  background: #7F0019;
+  color: #fff;
+}
+
+/*tabBar*/
+.tabBar{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 999999;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #7F0019;
+}
+.tabBar text{
+  flex: 1;
+  text-align: center;
+  color: #fff;
+  font-size: 30rpx;
+}

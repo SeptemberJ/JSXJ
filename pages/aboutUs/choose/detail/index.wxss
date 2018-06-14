@@ -1,0 +1,24 @@
+@import "../../../wxParse/wxParse.wxss";
+.title{
+  width: 710rpx;
+  height: auto;
+  margin: 30rpx auto 10rpx auto;
+  text-align: center;
+}
+.title text{
+  width: 100%;
+  height: auto;
+  font-weight: 900;
+  
+}
+
+.introduction{
+    width: 710rpx;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 40rpx auto;
+}
+.introduction_content text{
+    color: #555555;
+}
