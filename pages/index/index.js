@@ -77,6 +77,7 @@ Page({
                     'fsalePrice': res.data.fsalePrice,
                     'image': res.data.image,
                     'fqty': res.data.fqty,
+                    'kcstatus': res.data.kcstatus ? res.data.kcstatus : res.data.fqty,
                     'discount': res.data.discount,
                     'id': res.data.order_id,
                     'choosed': true,

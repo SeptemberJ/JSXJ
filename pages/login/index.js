@@ -10,13 +10,13 @@ Page( {
 
   onLoad: function() {
     //调用应用实例的方法获取全局数据
-    app.getUserInfo((userInfo) => {
-      this.setData({
-        userInfo: userInfo,
-        nickName: userInfo.nickName,
-      })
-      console.log(this.data.userInfo)
-    })
+    // app.getUserInfo((userInfo) => {
+    //   this.setData({
+    //     userInfo: userInfo,
+    //     nickName: userInfo.nickName,
+    //   })
+    //   console.log(this.data.userInfo)
+    // })
     
    
   },

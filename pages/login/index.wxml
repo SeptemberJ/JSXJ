@@ -31,7 +31,7 @@
   <text bindtap='navigateToHandleList'>常见故障及处理</text>
   <text bindtap='navigateToChoose'>如何选购零件</text>
 </view> 
-
+<!-- <button open-type="getUserInfo">授权</button> -->
 <loading hidden="{{loadingHidden}}">
   加载中...
 </loading>
