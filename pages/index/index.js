@@ -76,8 +76,9 @@ Page({
                     'fname': res.data.fname,
                     'fsalePrice': res.data.fsalePrice,
                     'image': res.data.image,
-                    'fqty': res.data.fqty,
-                    'kcstatus': res.data.kcstatus ? res.data.kcstatus : res.data.fqty,
+                    'fqty': res.data.kcstatus != '' ? (res.data.kcstatus) : (res.data.fqty == 0 ? '现货' : res.data.fqty),
+                    // 'fqty': res.data.fqty == 0 ? '现货' : (res.data.fqty > 1 ? res.data.fqty : res.data.kcstatus),
+                    // 'kcstatus': res.data.kcstatus ? res.data.kcstatus : res.data.fqty,
                     'discount': res.data.discount,
                     'id': res.data.order_id,
                     'choosed': true,
@@ -88,6 +89,7 @@ Page({
                     infor: tempInfo
                   })
                   this.addOne()
+                  this.saveOneRecord(tempInfo[tempInfo.length-1])
                   console.log(idx)
                   console.log(backInfo)
                   console.log(this.data.infor)
@@ -108,7 +110,32 @@ Page({
 
 
     },
-
+    // 保存一条记录
+    saveOneRecord: function (itemInfo) {
+      let obj = {
+        'fnumber': itemInfo.fnumber || '',
+        'id': itemInfo.id,
+        'fdiscount': itemInfo.discount,
+        'ftotal': itemInfo.ftotal || '',
+      }
+      wx.request({
+        url: h.main + '/submitno',
+        data: {
+          orders: JSON.stringify({ 'fusername': app.globalData.fname, 'order': obj })
+        },
+        method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+        header: {
+          'content-type': 'application/x-www-form-urlencoded',
+          'Accept': 'application/json',
+        }, // 设置请求的 header
+        success: (res) => {
+        },
+        fail: (res) => {
+        },
+        complete: (res) => {
+        }
+      })
+    },
     // 输入数量
     inputAmount: function(e) {
        console.log('amount-----');
@@ -255,7 +282,7 @@ Page({
       })
 
     },
-  navigateToIntroduction: function (e) {
+    navigateToIntroduction: function (e) {
       wx.navigateTo({
         url: '../aboutUs/introduction/index'
       });

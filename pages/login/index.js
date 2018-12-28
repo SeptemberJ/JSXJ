@@ -84,7 +84,7 @@ Page( {
             case 2:
             wx.showModal({
               title: '提示',
-              content: '密码错误!',
+              content: '信息错误!',
               showCancel: false,
               success: (res) => {
                 if (res.confirm) {
@@ -92,28 +92,28 @@ Page( {
               }
             })
             break;
-            case 3:
-            wx.showModal({
-              title: '提示',
-              content: '用户不存在!',
-              showCancel: false,
-              success: (res) => {
-                if (res.confirm) {
-                }
-              }
-            })
-            break;
-            case 4:
-              wx.showModal({
-                title: '提示',
-                content: '用户名或密码错误!',
-                showCancel: false,
-                success: (res) => {
-                  if (res.confirm) {
-                  }
-                }
-              })
-              break;
+            // case 3:
+            // wx.showModal({
+            //   title: '提示',
+            //   content: '用户不存在!',
+            //   showCancel: false,
+            //   success: (res) => {
+            //     if (res.confirm) {
+            //     }
+            //   }
+            // })
+            // break;
+            // case 4:
+            //   wx.showModal({
+            //     title: '提示',
+            //     content: '用户名或密码错误!',
+            //     showCancel: false,
+            //     success: (res) => {
+            //       if (res.confirm) {
+            //       }
+            //     }
+            //   })
+            //   break;
             default:
             console.log(res.data.substring(6))
             app.globalData.ftype = Number(res.data.substring(6))

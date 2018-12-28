@@ -24,7 +24,7 @@
       <input value="{{inforItem.YHprice || ''}}" disabled="true"/>
     </view>
     <view class="item">
-      <input value="{{inforItem.kcstatus}}" disabled="true"/>
+      <input value="{{inforItem.fqty}}" disabled="true"/>
       <!-- <input value="{{inforItem.kcstatus?inforItem.kcstatus:inforItem.fqty}}" disabled="true"/> -->
       <!-- <input value="{{inforItem.fqty?inforItem.fqty:''}}" disabled="true"/> -->
     </view>
@@ -51,7 +51,7 @@
     </view>
 
 <view class="addOne_block" bindtap="submitOrder">
-  <button>提交订单</button>
+  <button>提交询价</button>
 </view>
 
 <view class='tabBar'>
