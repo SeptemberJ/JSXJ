@@ -5,36 +5,38 @@
   </view>
   <!--Infor-->
   <view class="inforBox" wx:for="{{infor}}" wx:for-item="inforItem"  wx:for-index="inforIndex">
-    <view class="item delete">
+    <!-- <view class="item delete">
       <image src="../../image/{{inforItem.choosed?'choose-active.png':'choose.png'}}" bindtap="deleteRecord" data-ridx="{{inforIndex}}"></image>
-    </view>
+    </view> -->
     <view class="item">
       <input value="{{inforIndex+1}}" disabled="true"/>
     </view>
     <view class="item">
       <input placeholder="输入零件号" bindinput="changeGoodNo" bindblur="getInfo" data-index="{{inforIndex}}" value="{{goodNo[inforIndex]}}" disabled="{{inforItem.fname?true:false}}"/>
     </view>
+    <!-- 品名 -->
     <view class="item">
       <input value="{{inforItem.fname}}" disabled="true"/>
     </view>
+    <!-- 市场单价 -->
     <view class="item">
       <input value="{{inforItem.fsalePrice}}" disabled="true"/>
     </view>
+    <!-- 优惠单价 -->
     <view class="item">
       <input value="{{inforItem.YHprice || ''}}" disabled="true"/>
     </view>
+    <!-- 库存 -->
     <view class="item">
       <input value="{{inforItem.fqty}}" disabled="true"/>
-      <!-- <input value="{{inforItem.kcstatus?inforItem.kcstatus:inforItem.fqty}}" disabled="true"/> -->
-      <!-- <input value="{{inforItem.fqty?inforItem.fqty:''}}" disabled="true"/> -->
     </view>
-    <view class="item">
+    <!-- <view class="item">
       <input type="number" placeholder="{{inforItem.fname?'输入数量':''}}" bindinput="inputAmount" data-index="{{inforIndex}}" value="{{amount[inforIndex]>0?amount[inforIndex]:''}}"/>
-    </view>
-    <view class="item">
-      <!--<input value="{{inforItem.discount*inforItem.fsalePrice*amount[inforIndex] || ''}}" disabled="true"/>-->
+    </view> -->
+    <!-- <view class="item">
       <input value="{{inforItem.ftotal || ''}}" disabled="true"/>
-    </view>
+    </view> -->
+    <!-- 图片 -->
     <view class="item">
       <text wx:if="{{inforItem.image}}" bindtap="showImg" data-index="{{inforIndex}}" data-image="y{{inforItem.image}}">查看</text>
     </view>
@@ -50,8 +52,9 @@
       </view>
     </view>
 
-<view class="addOne_block" bindtap="submitOrder">
-  <button>提交询价</button>
+<view class="addOne_block">
+  <button bindtap="addOne">添加一条</button>
+  <button bindtap="submitOrder">提交询价</button>
 </view>
 
 <view class='tabBar'>

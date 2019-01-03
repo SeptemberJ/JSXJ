@@ -25,7 +25,7 @@
      border-bottom:2rpx solid #eee; 
 }
 .inforBox{
-    width: 2000rpx;
+    width: 1400rpx;
     height: 110rpx;
     /*display: block;*/
     border-bottom:2rpx solid #eee; 
@@ -112,7 +112,7 @@
 }
 
 .addOne_block{
-    width:180rpx;
+    width:100%;
     height: 80rpx;
     display: flex;
     position: fixed;
@@ -125,11 +125,13 @@
     margin:20rpx auto auto 20rpx;
     font-weight: bold;
     color: #1aad16;
+    justify-content: space-around;
+
     /*background: #1aad16;*/
     
 }
 .addOne_block button{
-    width: 100%;
+    width: 200rpx;
     height: 80rpx;
     line-height: 80rpx;
     background: #7F0019;

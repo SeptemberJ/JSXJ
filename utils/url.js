@@ -1,4 +1,4 @@
-// var main ="http://205.168.1.100:8082";
+// var main ="http://172.16.52.100:8082";
 var main = "https://wxmms.swissems.cn/jingshanJK";
 
 

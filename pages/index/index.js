@@ -10,7 +10,8 @@ Page({
     loadingHidden:true,
     ifShowImg:0,
     imgSrc:'',
-    topTit:['操作','序号','零件号','品名','市场单价','优惠单价','库存','需求数量','总价','图片'],
+    topTit2: ['操作', '序号', '零件号', '品名', '市场单价', '优惠单价', '库存', '需求数量', '总价', '图片'],
+    topTit:['序号','零件号','品名','市场单价','优惠单价','库存','图片'],
     infor:[0],
     inforArray:[0],
     goodNo:[],
@@ -38,9 +39,31 @@ Page({
         goodNo: temp
       })
     },
-
+  getInfo: function (e) {
+    console.log(e.detail)
+    if (e.detail.value.trim() == '') {
+      return false
+    }
+    let tempInfo = this.data.infor
+    let idx = e.currentTarget.dataset.index
+    var backInfo = {
+      'fname': '',
+      'fsalePrice': '',
+      'image': '',
+      'fqty': '',
+      'discount': '',
+      'id': '',
+      'choosed': true,
+      'YHprice': '',
+    }
+    tempInfo.splice(idx, 1, backInfo)
+    this.setData({
+      infor: tempInfo
+    })
+    // this.addOne()
+    },
     // 获取零件信息
-    getInfo: function (e) {
+    getInfo2: function (e) {
       if(e.detail.value.trim()=='' || e.detail.value.trim()==null){
         return false
       }
@@ -165,6 +188,7 @@ Page({
       this.setData({
         infor: tempInfo
       })
+      console.log(this.data.infor)
 
 
     },
@@ -201,9 +225,73 @@ Page({
             }) 
       // console.log(this.data.ifShowImg);
     },
-    
+  submitOrder: function () {
+    console.log(this.data.goodNo)
+    if (this.data.goodNo.length == 0){
+      wx.showModal({
+        title: '提示',
+        content: '请输入需要查询的零件号!',
+        showCancel: false,
+        success: (res) => {
+        }
+      })
+      return false
+    }
+    wx.showLoading({
+      title: '加载中',
+    })
+    // var submitOrder = []
+    // this.data.infor.map(function (item, idx) {
+    //   if (item.choosed) {
+    //     let obj = {
+    //       'fnumber': item.fnumber,
+    //       'id': item.id,
+    //       'fdiscount': item.fdiscount,
+    //       'ftotal': item.ftotal,
+    //     }
+    //     submitOrder.push(obj)
+    //   }
+    // })
+    wx.request({
+      url: h.main + '/itemsearch',
+      method: 'GET',
+      data: {
+        partno: this.data.goodNo,
+        ftype: app.globalData.ftype,
+        fusername: app.globalData.fname
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded',
+      },
+      success: (res) => {
+        let tempInfoArray = this.data.infor
+          this.data.goodNo.map((partno, idxC) => {
+            res.data.map((item, idx) => {
+            if (item.partno == partno ) {
+              let InfoItem = {
+                'fname': item.fname,
+                'fsalePrice': item.fsalePrice,
+                'image': res.data.image,
+                'fqty': item.kcstatus != '' ? (item.kcstatus) : (item.fqty == 0 ? '现货' : item.fqty),
+                'discount': item.discount,
+                'id': item.order_id,
+                'choosed': true,
+                'YHprice': Math.round(Number(item.fsalePrice) * Number(item.discount))
+              }
+              tempInfoArray.splice(idxC, 1, InfoItem)
+            }
+          })
+        })
+        console.log(tempInfoArray)
+        this.setData({
+          infor: tempInfoArray
+        })
+        wx.hideLoading()
+      }
+    });
+  },
     //提交订单
-    submitOrder: function(){
+    submitOrder2: function(){
       
       var submitOrder = []
       console.log(this.data.infor)
@@ -216,6 +304,49 @@ Page({
             'ftotal': item.ftotal,
           }
           submitOrder.push(obj)
+        }
+      })
+      wx.request({
+        url: h.main + '/submit',
+        data: {
+          orders: JSON.stringify({ 'fusername': app.globalData.fname, 'order': submitOrder })
+        },
+        method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+        header: {
+          'content-type': 'application/x-www-form-urlencoded',
+          'Accept': 'application/json',
+        }, // 设置请求的 header
+        success: (res) => {
+          console.log('提交订单backInfo---=')
+          console.log(res)
+          var _this = this
+          if (res.data == 1) {
+            wx.showToast({
+              title: '提交成功',
+              icon: 'success',
+              duration: 2000
+            })
+            this.setData({
+              infor: [0],
+              amount: [0],
+              goodNo: []
+            })
+          } else {
+            wx.showModal({
+              title: '提示',
+              content: '订单不能为空!',
+              showCancel: false,
+              success: (res) => {
+                if (res.confirm) {
+
+                }
+              }
+            });
+          }
+        },
+        fail: (res) => {
+        },
+        complete: (res) => {
         }
       })
 
