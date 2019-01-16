@@ -21,16 +21,33 @@ Page({
   // 增加一行
   addOne: function () {
         console.log('addOneKind----')
+    if (this.data.infor.length == 8) {
+      wx.showModal({
+        title: '提示',
+        content: '一次最多查询8条,请先清空!',
+        showCancel: false
+      })
+      return false
+    }
         var tempArrayInfor= this.data.infor
         var tempArrayAmount= this.data.amount
         tempArrayInfor.push({})
         tempArrayAmount.push(0)
         this.setData({  
-                infor:tempArrayInfor,
-                amount:tempArrayAmount
-            }) 
+          infor:tempArrayInfor,
+          amount:tempArrayAmount
+        }) 
     },
 
+    //  清空
+   clearAll: function () {
+     this.setData({
+       infor: [0],
+       inforArray: [0],
+       goodNo: [],
+       amount: [0]
+     })
+   },
     // 修改输入零件号
     changeGoodNo: function (e) {
       let temp = this.data.goodNo
@@ -287,6 +304,13 @@ Page({
           infor: tempInfoArray
         })
         wx.hideLoading()
+        wx.showModal({
+          title: '提示',
+          content: '提交成功，下单请电话或微信联系13370206676朱先生',
+          showCancel: false,
+          success(res) {
+          }
+        })
       }
     });
   },

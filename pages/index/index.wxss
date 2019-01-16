@@ -122,7 +122,7 @@
     z-index: 99999;
     flex-direction: row;
     align-items: center;
-    margin:20rpx auto auto 20rpx;
+    margin:20rpx auto auto 0rpx;
     font-weight: bold;
     color: #1aad16;
     justify-content: space-around;
@@ -131,7 +131,7 @@
     
 }
 .addOne_block button{
-    width: 200rpx;
+    width: 180rpx;
     height: 80rpx;
     line-height: 80rpx;
     background: #7F0019;

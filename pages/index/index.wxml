@@ -55,6 +55,7 @@
 <view class="addOne_block">
   <button bindtap="addOne">添加一条</button>
   <button bindtap="submitOrder">提交询价</button>
+  <button bindtap="clearAll">清空</button>
 </view>
 
 <view class='tabBar'>
